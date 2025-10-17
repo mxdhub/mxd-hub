@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mxdhub.github.io/mxd-hub/sitemap.xml
+Sitemap: https://mxdhub.github.io/mxd-hub/sitemap-store.xml
