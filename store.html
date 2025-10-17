@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>MXD Hub — Cửa hàng</title>
+  <meta name="description" content="Khám phá danh mục và sản phẩm tuyển chọn tại MXD Hub: dụng cụ thi công, keo & phụ gia, máy cắt gạch, thời trang & bảo hộ làm việc.">
+  <meta name="robots" content="index,follow">
+
+  <!-- Canonical tuyệt đối cho store hub -->
+  <link rel="canonical" href="https://mxdhub.github.io/mxd-hub/store.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MXD Hub — Cửa hàng">
+  <meta property="og:description" content="Danh mục và sản phẩm tuyển chọn cho thi công: dụng cụ, keo & phụ gia, máy cắt gạch, thời trang & bảo hộ.">
+  <meta property="og:url" content="https://mxdhub.github.io/mxd-hub/store.html">
+  <meta property="og:image" content="https://mxdhub.github.io/mxd-hub/assets/img/og/store-1200x630.webp">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/site.css">
+
+  <!-- GA4 luôn TRƯỚC affiliate -->
+  <script defer src="assets/analytics.js"></script>
+  <!-- Affiliate đứng SAU GA4 -->
+  <script defer src="assets/mxd-affiliate.js"></script>
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="./">MXD Hub</a>
+  <nav class="nav">
+    <a href="store.html" aria-current="page">Cửa hàng</a>
+    <a href="tin-tuc/">Tin tức</a>
+    <a href="kinh-nghiem/">Kinh nghiệm</a>
+    <a href="lien-he/">Liên hệ</a>
+  </nav>
+</header>
+
+<main class="container">
+  <h1>Cửa hàng MXD Hub</h1>
+  <p>Chọn nhanh theo danh mục hoặc kéo xuống để xem sản phẩm nổi bật.</p>
+
+  <!-- GRID DANH MỤC (chuẩn MXD Rule — 2025-10-03) -->
+  <section aria-labelledby="cat-title">
+    <h2 id="cat-title">Danh mục nổi bật</h2>
+
+    <!-- Dạng DIV hợp lệ theo quy chuẩn -->
+    <div class="category-grid">
+      <!-- Mỗi tile liên kết tới hub danh mục /store/<slug>.html
+           Ảnh: /assets/img/categories/<slug>.webp
+           alt phải là “<Tên danh mục> — MXD” -->
+      <a class="category-tile" href="store/dung-cu-thi-cong.html">
+        <img src="assets/img/categories/dung-cu-thi-cong.webp" alt="Dụng cụ thi công — MXD" width="320" height="200">
+        <span>Dụng cụ thi công</span>
+      </a>
+
+      <a class="category-tile" href="store/keo-phu-gia.html">
+        <img src="assets/img/categories/keo-phu-gia.webp" alt="Keo & phụ gia — MXD" width="320" height="200">
+        <span>Keo & phụ gia</span>
+      </a>
+
+      <a class="category-tile" href="store/may-cat-gach.html">
+        <img src="assets/img/categories/may-cat-gach.webp" alt="Máy cắt gạch — MXD" width="320" height="200">
+        <span>Máy cắt gạch</span>
+      </a>
+
+      <a class="category-tile" href="store/thoi-trang-lam-viec.html">
+        <img src="assets/img/categories/thoi-trang-lam-viec.webp" alt="Thời trang & làm việc — MXD" width="320" height="200">
+        <span>Thời trang &amp; làm việc</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- SẢN PHẨM NỔI BẬT (shell theo chuẩn meta link MXD) -->
+  <section aria-labelledby="feat-title" class="mt-4">
+    <h2 id="feat-title">Sản phẩm nổi bật</h2>
+
+    <!--
+      Chuẩn trình dựng thẻ sản phẩm (MXD Rule 44):
+      - “Meta link” đứng TRƯỚC: class=product-meta, chứa data-merchant, data-sku, data-img, data-price
+      - Ngay sau là 1..n <a class="buy"> tới nơi bán
+      - Renderer chỉ đọc “meta link”; fallback ảnh = /assets/img/products/<data-sku>.webp
+      - Ảnh sản phẩm phải ở /assets/img/products/<slug>.webp
+    -->
+
+    <div class="product-list" id="auto-products">
+      <!-- Ví dụ 1 (giữ nguyên, sau này thay bằng dữ liệu thật) -->
+      <a class="product-meta"
+         href="https://shopee.vn/..." 
+         data-merchant="shopee"
+         data-sku="may-cat-gach-110mm-mxd"
+         data-img="assets/img/products/may-cat-gach-110mm-mxd.webp"
+         data-price="499000">Máy cắt gạch 110mm MXD</a>
+      <a class="buy" href="https://shopee.vn/...">Mua tại Shopee</a>
+      <a class="buy" href="https://lazada.vn/...">Mua tại Lazada</a>
+
+      <!-- Ví dụ 2 -->
+      <a class="product-meta"
+         href="https://shopee.vn/..."
+         data-merchant="shopee"
+         data-sku="keo-dan-gach-chong-tham-kg20"
+         data-img="assets/img/products/keo-dan-gach-chong-tham-kg20.webp"
+         data-price="189000">Keo dán gạch chống thấm (20kg)</a>
+      <a class="buy" href="https://shopee.vn/...">Mua tại Shopee</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <nav>
+    <a href="chinh-sach/doi-tra.html">Đổi trả</a> ·
+    <a href="chinh-sach/bao-mat.html">Bảo mật</a>
+  </nav>
+</footer>
+</body>
+</html>
